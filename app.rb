@@ -28,16 +28,15 @@ class App < Sinatra::Base
     number2 = params[:number2].to_i
     if operation == "add"
       answer = number1 + number2
-    elsif operation == "subtract"
+      elsif operation == "subtract"
       answer = number1 - number2
-    elsif operation == "multiply"
+      elsif operation == "multiply"
       answer = number1 * number2
-    elsif operation == "divide"
+      elsif operation == "divide"
       answer = number1 / number2
-    else
-      answer = "Unable to perform this operation"
+     else
+      answer = "Error"
     end
     answer.to_s
   end
-
 end
